@@ -1,0 +1,94 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+<div class="icon-text">
+{% if section.settings.enabletxt %}
+{{section.settings.heading}}
+{% endif %}
+
+<P>{{section.settings.font_size }}</P>
+ <button onclick="myFunction()">Try it</button>
+<p>{{section.settings.description}}</p>
+  
+
+{%if section.settings.myimage %}
+<img src="{{section.settings.myimage | img_url: "1000x" }}" />
+{% endif %}
+ <hr>  
+
+<div class="gallery">
+{% for block in section.blocks %}
+  <div class="gallery-item">
+    {% if block.settings.enable_gallery_img %}
+  <img src="{{ block.settings.gallry_image | img_url: '350x'  }}" />
+ {% endif%}
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "icon with text above",
+    "settings": [
+				{
+				"type":"text",
+				"label":"your heading for the section",
+				"id":"heading"
+				},
+				{
+                "type" : "checkbox",
+                "id" : "enabletxt",
+                "label": "enable your text",
+                "default" : true
+                },
+			{
+              "type":"richtext",
+              "label":"your description",
+              "id":"description"
+			},
+			{
+            "type": "range",
+            "id": "font_size",
+            "min": 12,
+            "max": 24,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size",
+            "default": 16
+          },
+				
+			{
+				"type":"image_picker",
+				"label":"select image",
+				"id":"myimage"
+			}
+              
+	],
+	 "blocks": [
+				{
+                  "type":"gellery",
+                  "name":"gellery",	
+                         "settings": [
+                          {
+                          "type":"checkbox",
+                          "id":"enable_gallery_img",
+                          "label":"Enabal Gallry Image",
+							"default": false
+                          },
+						{
+				"type":"image_picker",
+				"label":"Gallry image",
+				"id":"gallry_image"
+			}
+]
+				}],
+	"presets" : [
+
+			{
+			"category":"image",
+			"name":"icon with text"	
+			}
+			]
+  }
+{% endschema %}
+
+

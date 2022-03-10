@@ -1,0 +1,73 @@
+<div class="container colour">
+  <div class="parent">
+  <div class="left-txt">
+    <div class="line">
+        <h1>{{ section.settings.textbox1}}</h1>
+        <h2>{{ section.settings.descbox1}}</h2>
+        <p>{{ section.settings.linkbox1}}</p>
+        <a href="{{ section.settings.urlbox1 }}"><p class="link1">{{ section.settings.urlbox1 }}</p></a>
+    </div>
+    </div>
+  <div class="right-img"> 
+
+{%if section.settings.myimage %}
+<img src="{{section.settings.myimage | img_url: "1000x" }}" />
+{% endif %}
+    </div>
+</div>
+</div>
+
+ 
+{% schema %}
+  {
+    "name": "banner_colour",
+    "settings": [
+						{
+       "type" : "text",
+       "id" : "textbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is text block "
+},
+{
+       "type" : "text",
+       "id" : "descbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is description box "
+},
+{
+       "type" : "text",
+       "id" : "linkbox1",
+       "label" : "Enter Your Link Text",
+       "default" : " this is text box "
+},
+{
+       "type" : "text",
+       "id" : "urlbox1",
+       "label" : "Enter Your Link url",
+       "default" : " link_url "
+},
+ {
+                    "type":"image_picker",
+                    "label":"select image",
+                    "id":"myimage"
+                }
+],
+
+"presets" : [
+    {
+      "category":"text",
+      "name":"banner-colour"
+    }
+]
+
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+ 
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

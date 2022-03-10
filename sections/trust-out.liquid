@@ -1,0 +1,99 @@
+<div class="commen_banner"style="{%- if section.settings.image != blank -%}background-image:url('{{ section.settings.image | img_url:'master' }}');{% endif %}">
+
+<div class="container">
+    <div class="row">
+      <div class="column">
+        <h1 class="banner_title">{{section.settings.textbox1}}</h1>
+        <p>
+          <span class="sp2">{{section.settings.descbox1}}</span>
+        </p>
+        <p>
+           <span class="sp3">{{section.settings.descbox2}}</span>
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .commen_banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px 0;
+  }
+    .commen_banner .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .commen_banner .row {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .commen_banner h1.banner_title {
+    color: #7e7b7b;
+    font-size: 28px;
+    letter-spacing: 7px;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 100;
+     }
+  .column {  
+    width: 100%;
+    align-items: center;
+    max-width: 890px;
+    margin: 0 auto;
+    position: relative;
+}
+ 
+</style>  
+
+
+{% schema %}
+  {
+    "name": "commen_banner",
+    "settings": [
+		{
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+{
+		"type" : "text",
+       "id" : "textbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is text block "
+},
+{
+       "type" : "text",
+       "id" : "descbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is description box "
+},
+{
+       "type" : "text",
+       "id" : "descbox2",
+       "label" : "Enter Your Text Here",
+       "default" : " this is description box "
+}
+	],
+	"presets" : [
+    {
+      "category":"commen_banner",
+      "name":"commen_banner"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
