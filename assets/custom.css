@@ -1,3 +1,6 @@
+.left-txt h1{
+  color: #d6b11f;
+}
 .product_images .main_images .slick-dots {
    display: none !important;
 }
