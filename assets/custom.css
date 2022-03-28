@@ -1,5 +1,5 @@
 .left-txt h1{
-  color: #d6b11f;
+  color: #1fd61f;
 }
 .product_images .main_images .slick-dots {
    display: none !important;
@@ -205,8 +205,8 @@ width:72%;
   }
    
 }
-@media screen and (max-width: 991px)
+@media screen and (max-width: 991px){
 p.link1 {
     width: 47%;
 }
-
+}
