@@ -136,13 +136,22 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
+        
+        
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+            <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">
+              
+              {{ product_card_product.compare_at_price | minus: product_card_product.price | times: 100 | divided_by: product_card_product.compare_at_price }}% OFF
+          
+          
+          </span>
           {%- endif -%}
         </div>
+        
+        
       </div>
     </div>
   </div>
