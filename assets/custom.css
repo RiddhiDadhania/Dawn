@@ -231,7 +231,7 @@ p.link1 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-<style>
+
 #gd-pre-footer { overflow:hidden; clear:both; margin-top:35px; margin-bottom:10px; padding-bottom:0; }
 #gd-pre-footer .col-item { padding:15px 25px; text-align:center; list-style:none; }
 #gd-pre-footer ul { padding-left:0 !important; }
@@ -244,4 +244,4 @@ float:left;
 padding:5px 15px;
 }
 }
-</style>
+
