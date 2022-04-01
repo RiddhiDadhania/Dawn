@@ -18,6 +18,9 @@ div#gd-pre-footer {
 ul.footer-badges-list {
     color: red;
 }
+span.price-item.price-item--regular {
+    color: red;
+}
 
 .left-txt h1{
   color: #b5df41;
