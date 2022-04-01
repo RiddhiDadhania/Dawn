@@ -19,7 +19,9 @@ ul.footer-badges-list {
     color: red;
 }
 
-
+ul.footer-badges-list {
+    color: red;
+}
 
 .left-txt h1{
   color: #b5df41;
