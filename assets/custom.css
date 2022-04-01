@@ -15,6 +15,10 @@ div#gd-pre-footer {
     background: #edae81;
   overflow:hidden;
 }
+ul.footer-badges-list {
+    color: red;
+}
+
 .left-txt h1{
   color: #b5df41;
 }
