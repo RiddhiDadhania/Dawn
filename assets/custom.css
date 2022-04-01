@@ -31,8 +31,8 @@
   background: #cebbc1; 
   }
 .container {
-    max-width: 1290px;
-    margin: auto;
+  max-width: 1290px;
+  margin: auto;
   padding: 36px 0;
   padding-right: 50px;
 }
